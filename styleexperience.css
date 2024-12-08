@@ -1,0 +1,171 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%; /* Ensure the page takes up full viewport height */
+}
+
+body {
+  font-family: 'Playfair Display', serif; /* Consistent font family */
+  background: linear-gradient(to right, #070f2b, #070f2b); /* Dark blue to black gradient */
+  color: #fff;
+  display: flex; /* Flex layout for stacking header, main, and footer */
+  flex-direction: column; /* Vertical stacking */
+  line-height: 1.6;
+  min-height: 100vh; /* Ensures full height of the viewport */
+}
+
+/* Main Content Fills Remaining Space */
+main {
+  flex: 1;
+}
+
+/* Navigation Bar */
+header {
+  background-color: #111;
+  padding: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+nav ul li a:hover {
+  color: #d2e0fb;
+}
+
+/* Experience Section */
+.experience {
+  padding: 4rem 2rem; /* Add spacing around the section */
+  background: linear-gradient(to bottom, #070f2b, #111); /* Smooth gradient background */
+  color: #fff;
+  text-align: center;
+  min-height: 80vh; /* Ensure section takes at least 60% of the viewport height */
+  position: relative; /* Allow shadow to extend without cutting off */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0); /* Add a subtle shadow effect */
+  border-bottom: 0; /* Ensure no border separating sections */
+}
+
+/* Experience Section Title */
+.experience h2 {
+  font-size: 2.2rem; /* Reduced to fit well with content */
+  margin-bottom: 1rem; /* Reduced margin to bring date closer */
+  font-family: 'Playfair Display', serif;
+  color: #d2e0fb;
+}
+
+/* Timeline Section */
+.experience-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; /* Reduced gap for tighter spacing between items */
+  margin: 0 auto;
+  max-width: 800px;
+  text-align: left;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 2rem;
+  margin-left: 1.5rem;
+  border-left: 2px solid #d2e0fb; /* Vertical line to mark timeline */
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -6px;
+  top: 0;
+  background-color: #d2e0fb;
+  border-radius: 50%;
+  width: 12px; /* Slightly smaller bullet size */
+  height: 12px; /* Slightly smaller bullet size */
+}
+
+.timeline-date {
+  font-size: 1.1rem; /* Slightly smaller than heading */
+  color: #5b646b; /* Grey color for the date */
+  margin-bottom: 0.5rem; /* Space between the date and the description */
+}
+
+.timeline-item h3 {
+  font-size: 1.4rem; /* Slightly smaller heading */
+  margin-bottom: 0.5rem; /* Reduced margin */
+  color: #d2e0fb;
+}
+
+.timeline-item p {
+  font-size: 1.1rem; /* Reduced font size */
+  color: #ddd;
+  line-height: 1.6;
+}
+
+/* Make the timeline items visible with animation */
+.home-item {
+  opacity: 0; /* Initially hidden */
+  transform: translateY(20px); /* Start below the viewport */
+  transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth transition */
+}
+
+.home-item.visible {
+  opacity: 1; /* Fade in when in view */
+  transform: translateY(0); /* Slide into original position */
+}
+
+/* Footer */
+footer {
+  background-color: #111; /* Ensure the footer blends seamlessly with the experience section */
+  color: #aaa; /* Light gray text */
+  padding: 1.5rem 0;
+  text-align: center;
+  margin-top: 0; /* Remove any extra margin */
+  border-top: 0; /* Remove any border at the top of the footer */
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+footer ul li {
+  margin: 0 15px;
+}
+
+footer ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 2rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer ul li a:hover {
+  color: #d2e0fb;
+  transform: scale(1.2);
+}
+
+footer p {
+  color: #aaa;
+  font-size: 1rem;
+  margin-top: 1rem; /* Space between icons and text */
+  line-height: 1.4;
+}

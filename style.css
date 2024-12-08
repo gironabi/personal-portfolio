@@ -1,0 +1,171 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Playfair Display', serif; /* Apply Playfair Display globally */
+  background: linear-gradient(to right, #070f2b, #070f2b); /* Dark blue to black gradient */
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* Navigation Bar */
+header {
+  background-color: #111;
+  padding: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+nav ul li a:hover {
+  color: #d2e0fb; /* Silver/Gold Hover Effect */
+}
+
+/* Index Page - Animation for Items */
+.home-item {
+  opacity: 0; /* Initially hidden */
+  transform: translateY(20px); /* Start below the viewport */
+  transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth transition */
+}
+
+.home-item.visible {
+  opacity: 1; /* Make visible when in view */
+  transform: translateY(0); /* Slide to original position */
+}
+
+/* Other Global Styles */
+body.home-page {
+  font-family: 'Playfair Display', serif;
+  background-color: #111;
+  color: #fff;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh; /* Full viewport height */
+  display: flex; /* Use Flexbox for centering */
+  flex-direction: column; /* Stack content vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  text-align: center;
+  padding: 2rem; /* Add padding for breathing space */
+  background: linear-gradient(to right, #070f2b, #111); /* Optional: Add gradient background */
+}
+
+.hero-name {
+  font-size: 4rem; /* Increase font size for prominence */
+  margin-bottom: 1rem;
+  color: #d2e0fb; /* Accent color */
+}
+
+.hero p {
+  font-size: 1.5rem;
+  max-width: 600px; /* Limit the paragraph width */
+  color: #fff;
+  line-height: 1.6; /* Improve readability */
+}
+
+/* About Section */
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  background-color: #222;
+  text-align: center;
+}
+
+.about-content {
+  max-width: 800px;
+  text-align: center;
+}
+
+.about h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem; /* Adjusted to match Projects */
+  margin-bottom: 2rem;
+  color: #d2e0fb; /* Accent Color */
+}
+
+.about p {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem; /* Adjusted to match Projects */
+  color: #ddd;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.focus-areas {
+  list-style: disc;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  gap: 2rem; /* Space between items */
+  justify-content: center; /* Center the grid */
+  font-family: 'Georgia', serif;
+  font-size: 1.2rem; /* Adjusted to match Projects */
+  color: #ddd;
+  margin: 1rem auto;
+  padding-left: 0; /* Remove default list padding */
+  max-width: 100px; /* Limit width for better centering */
+}
+
+.focus-areas li {
+  margin-bottom: 0rem;
+  text-align: left; /* Optional: Align text in each column */
+}
+
+/* Footer */
+footer {
+  background-color: #111; /* Dark footer background */
+  padding: 1.5rem 0; /* Top and bottom padding */
+  text-align: center;
+}
+
+footer ul {
+  list-style: none; /* Remove bullet points */
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Center align the list */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+}
+
+footer ul li {
+  margin: 0 15px; /* Space between items */
+}
+
+footer ul li a {
+  color: #fff; /* Default white color for icons */
+  text-decoration: none; /* Remove underline */
+  font-size: 2rem; /* Adjust icon size */
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth hover effects */
+}
+
+footer ul li a:hover {
+  color: #d2e0fb; /* Light blue on hover */
+  transform: scale(1.2); /* Slight zoom on hover */
+}
+
+footer p {
+  color: #aaa; /* Light gray text for footer description */
+  font-size: 1rem; /* Adjust font size */
+  margin-bottom: 1rem; /* Space between text and icons */
+  line-height: 1.4; /* Improve readability */
+}

@@ -1,0 +1,193 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%; /* Ensure the page takes up full viewport height */
+}
+
+body {
+  font-family: 'Playfair Display', serif; /* Same font family as in Experience */
+  background: linear-gradient(to right, #070f2b, #070f2b); /* Dark blue to black gradient */
+  color: #fff;
+  display: flex; /* Flex layout for stacking header, main, and footer */
+  flex-direction: column; /* Vertical stacking */
+  line-height: 1.6;
+  min-height: 100vh; /* Ensures full height of the viewport */
+}
+
+/* Main Content Fills Remaining Space */
+main {
+  flex: 1;
+}
+
+/* Navigation Bar */
+header {
+  background-color: #111;
+  padding: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+nav ul li a:hover {
+  color: #d2e0fb;
+}
+
+/* Projects Section */
+.projects {
+  padding: 4rem 2rem; /* Adjust padding for better spacing */
+  background: linear-gradient(to right, #070f2b, #070f2b); /* Dark blue gradient */
+  color: #fff;
+  text-align: center;
+  flex-grow: 1; /* Ensure it takes up remaining space above the footer */
+}
+
+.projects h2 {
+  font-size: 2.5rem; /* Same font size as Experience section */
+  margin-bottom: 2rem;
+  color: #d2e0fb; /* Accent color */
+  font-family: 'Playfair Display', serif;
+}
+
+/* Slide Animation */
+.home-item, .experience-item, .projects-item, .carousel-slide {
+  opacity: 0; /* Initially hidden */
+  transform: translateY(20px); /* Start below the viewport */
+  transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth transition */
+}
+
+.home-item.visible, .experience-item.visible, .projects-item.visible, .carousel-slide.visible {
+  opacity: 1; /* Fade in when in view */
+  transform: translateY(0); /* Slide into original position */
+}
+
+/* Carousel Styles */
+.carousel-container {
+  position: relative;
+  width: 80%; /* You can adjust this to control the width of the carousel */
+  max-width: 100%; /* Ensure it fits within the container */
+  margin: 0 auto; /* Center the carousel */
+}
+
+.carousel {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+/* Carousel Slide - Rounded Corners and Uniform Shadow */
+.carousel-slide {
+  flex: 0 0 100%; /* Each slide takes up full width */
+  display: none; /* Initially hide all slides */
+  text-align: center;
+  background: linear-gradient(to right, #070f2b, #1c1c1c); /* Background color */
+  color: #d2e0fb;
+  padding: 2rem;
+  border-radius: 15px; /* Add rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Uniform and consistent shadow around the box */
+  transition: transform 0.5s ease-in-out; /* Smooth transition for movement */
+  font-size: 1.25rem; /* Slightly smaller font size */
+}
+
+.carousel-slide.active {
+  display: block; /* Show active slide */
+  opacity: 1; /* Ensure it is fully visible */
+  transform: translateY(0); /* Ensure active slide is in the correct position */
+}
+
+/* Carousel Controls - Arrows */
+.carousel-control {
+  background: none; /* Remove background */
+  border: none;
+  color: #d2e0fb; /* Arrow color */
+  font-size: 3rem; /* Increase arrow size */
+  cursor: pointer;
+  position: absolute; /* Fix the position of the buttons */
+  top: 50%; /* Vertically center */
+  transform: translateY(-50%); /* Adjust for exact centering */
+  z-index: 1;
+  transition: color 0.3s ease;
+  opacity: 0.7; /* Slight opacity */
+}
+
+.carousel-control:hover {
+  color: #97b9fb; /* Change arrow color on hover */
+  opacity: 1; /* Full opacity on hover */
+}
+
+.carousel-control.prev {
+  left: 0; /* Position the previous button on the left */
+}
+
+.carousel-control.next {
+  right: 0; /* Position the next button on the right */
+}
+
+/* Hide default scrollbar */
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+/* Footer */
+footer {
+  background-color: #111; /* Ensure the footer blends seamlessly with the experience section */
+  color: #aaa; /* Light gray text */
+  padding: 1.5rem 0;
+  text-align: center;
+  margin-top: 0; /* Remove any extra margin */
+  border-top: 0; /* Remove any border at the top of the footer */
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+footer ul li {
+  margin: 0 15px;
+}
+
+footer ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 2rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer ul li a:hover {
+  color: #d2e0fb;
+  transform: scale(1.2);
+}
+
+footer p {
+  color: #aaa;
+  font-size: 1rem;
+  margin-top: 1rem; /* Space between icons and text */
+  line-height: 1.4;
+}
+
+
+
+
